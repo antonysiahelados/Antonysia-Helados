@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antonysia Helados Artesanales | Loma Hermosa</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            brand: {
+              cream: '#EDE8D0',     // Crema oficial Brandboard
+              sand: '#EDDCC6',      // Arena suave Brandboard
+              blue: '#005B93',      // Azul marino oficial
+              blueHover: '#004875',
+              crimson: '#BF4646',   // Rojo frambuesa artesanal
+              crimsonHover: '#A33636',
+              dark: '#1C1917',
+              mp: '#009EE3',        // Mercado Pago
+              mpHover: '#0084BF'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-nav {
+      background: rgba(237, 232, 208, 0.92);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-sand selection:text-brand-blue">
+
+  <!-- TOP BAR NOTICIAS -->
+  <div class="bg-brand-blue text-white text-xs sm:text-sm py-2 px-4 text-center font-medium flex items-center justify-center gap-2">
+    <span>🛵 <strong>Delivery en el día:</strong> Loma Hermosa, Tres de Febrero, San Martín, Caseros y Villa Bosch.</span>
+    <span class="hidden md:inline bg-white/20 px-2 py-0.5 rounded text-[11px] font-bold">💳 Mercado Pago & Transferencia</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-brand-sand transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-brand-blue flex items-center justify-center text-white shadow-md group-hover:scale-105 transition transform">
+          <i data-lucide="ice-cream-2" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="font-serif text-2xl font-bold tracking-tight text-brand-blue block leading-none">Antonysia</span>
+          <span class="text-[10px] uppercase tracking-widest text-brand-crimson font-extrabold mt-1 block">Helados Artesanales</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 font-semibold text-sm text-gray-800">
+        <a href="#destacados" class="hover:text-brand-crimson transition">Sabores Estrella</a>
+        <a href="#sabores" class="hover:text-brand-crimson transition">Carta Completa</a>
+        <a href="#precios" class="hover:text-brand-crimson transition">Presentaciones</a>
+        <a href="#testimonios" class="hover:text-brand-crimson transition">Opiniones</a>
+        <a href="#faq" class="hover:text-brand-crimson transition">Preguntas</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#pedido" class="inline-flex items-center gap-2 bg-brand-crimson hover:bg-brand-crimsonHover text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition transform active:scale-95">
+          <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+          <span>Pedir Online</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-10 pb-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-brand-sand shadow-sm text-xs font-semibold text-gray-700">
+            <div class="flex text-amber-500">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            </div>
+            <span class="font-bold text-brand-blue">4.9 / 5</span>
+            <span class="text-gray-500">• El helado que más te gusta en Loma Hermosa</span>
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-blue leading-[1.12]">
+            Elaboración propia, <br class="hidden sm:inline" />
+            <span class="text-brand-crimson underline decoration-brand-sand decoration-wavy">materia prima italiana</span> y pura cremosidad.
+          </h1>
+          
+          <p class="text-base sm:text-lg text-gray-700 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Sin conservantes artificiales ni premezclas industriales. Frutas frescas de estación, dulce de leche repostero premium y el auténtico pistacho italiano en la puerta de tu casa.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#pedido" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-brand-blue hover:bg-brand-blueHover text-white px-8 py-4 rounded-2xl font-bold shadow-xl shadow-sky-950/20 hover:shadow-2xl transition transform active:scale-95 text-base">
+              <i data-lucide="sparkles" class="w-5 h-5 text-amber-300"></i>
+              <span>Armar Mi Pote Ahora</span>
+            </a>
+            <a href="#sabores" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/90 hover:bg-white text-brand-blue border border-brand-sand px-7 py-4 rounded-2xl font-bold shadow-sm hover:shadow transition text-base">
+              <i data-lucide="book-open" class="w-4 h-4 text-brand-crimson"></i>
+              <span>Ver los 25 Sabores</span>
+            </a>
+          </div>
+
+          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-brand-sand/80 text-center lg:text-left">
+            <div>
+              <p class="text-2xl font-extrabold text-brand-blue font-serif">100%</p>
+              <p class="text-xs text-gray-600 font-medium">Artesanal & Natural</p>
+            </div>
+            <div>
+              <p class="text-2xl font-extrabold text-brand-crimson font-serif">30-45'</p>
+              <p class="text-xs text-gray-600 font-medium">Cadena de frío segura</p>
+            </div>
+            <div>
+              <p class="text-2xl font-extrabold text-brand-blue font-serif">Online</p>
+              <p class="text-xs text-gray-600 font-medium">Mercado Pago / Alias</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-sm rounded-3xl bg-white p-6 shadow-2xl border border-brand-sand space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="bg-brand-crimson text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full shadow-sm tracking-wider">
+                🔥 Más Vendido
+              </span>
+              <span class="text-xs font-bold text-green-700 bg-green-50 px-2 py-0.5 rounded-md">Envío Rápido</span>
+            </div>
+            <div class="h-48 bg-gradient-to-tr from-brand-sand via-amber-100 to-orange-100 rounded-2xl flex flex-col items-center justify-center p-4 text-center relative overflow-hidden">
+              <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center text-brand-blue mb-2">
+                <i data-lucide="package-check" class="w-8 h-8 text-brand-crimson"></i>
+              </div>
+              <p class="font-serif font-bold text-xl text-brand-blue">Pote 1 KG Sellado</p>
+              <p class="text-xs text-gray-600">Hasta 4 sabores a elección + Cucharitas</p>
+            </div>
+            <div class="space-y-2 pt-1">
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-bold text-lg text-brand-dark">1 Kilo Artesanal</h3>
+                <span class="font-serif font-extrabold text-xl text-brand-blue">$23.000</span>
+              </div>
+              <p class="text-xs text-gray-500">Envase térmico sellado herméticamente que mantiene la cremosidad exacta.</p>
+            </div>
+            <a href="#pedido" class="block text-center w-full py-3 bg-brand-blue hover:bg-brand-blueHover text-white text-xs font-bold uppercase tracking-wider rounded-xl shadow-md transition">
+              Elegir gustos de este pote
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SABORES ESTRELLA -->
+  <section id="destacados" class="py-16 bg-white border-y border-brand-sand">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+        <div>
+          <span class="text-xs font-extrabold tracking-widest text-brand-crimson uppercase">Selección de Autor</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-blue mt-1">Sabores Estrella Más Pedidos</h2>
+          <p class="text-gray-600 text-sm mt-1">Nuestras especialidades recomendadas por el Maestro Heladero.</p>
+        </div>
+        <a href="#sabores" class="hidden md:inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:text-brand-crimson transition">
+          <span>Ver catálogo completo (25 sabores)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-2xl bg-brand-cream/60 border border-brand-sand p-5 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">🇮🇹 Receta Italiana</span>
+            <h3 class="font-bold text-lg text-brand-dark mt-2">Pistacho Italiano</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">Elaborado con 100% pasta pura de pistachos seleccionados. Textura aterciopelada.</p>
+          </div>
+          <button onclick="sumarSaborDirecto('Pistacho Italiano')" class="mt-4 w-full py-2 bg-white hover:bg-brand-blue hover:text-white text-brand-blue border border-brand-blue/30 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i><span>Sumar al Pedido</span>
+          </button>
+        </div>
+
+        <div class="rounded-2xl bg-brand-cream/60 border border-brand-sand p-5 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800">🔥 Más Pedido</span>
+            <h3 class="font-bold text-lg text-brand-dark mt-2">Rocher</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">Base de avellanas tostadas, veteado de chocolate y tropezones de bombón crocante.</p>
+          </div>
+          <button onclick="sumarSaborDirecto('Rocher')" class="mt-4 w-full py-2 bg-white hover:bg-brand-blue hover:text-white text-brand-blue border border-brand-blue/30 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i><span>Sumar al Pedido</span>
+          </button>
+        </div>
+
+        <div class="rounded-2xl bg-brand-cream/60 border border-brand-sand p-5 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800">👑 Clásico Nacional</span>
+            <h3 class="font-bold text-lg text-brand-dark mt-2">Súper Dulce de Leche</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">Elaborado con receta propia y sembrado con abundante dulce de leche natural repostero.</p>
+          </div>
+          <button onclick="sumarSaborDirecto('Súper Dulce de Leche')" class="mt-4 w-full py-2 bg-white hover:bg-brand-blue hover:text-white text-brand-blue border border-brand-blue/30 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i><span>Sumar al Pedido</span>
+          </button>
+        </div>
+
+        <div class="rounded-2xl bg-brand-cream/60 border border-brand-sand p-5 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-green-100 text-green-800">🌱 100% Fruta / Vegano</span>
+            <h3 class="font-bold text-lg text-brand-dark mt-2">Brasil Pepepe</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">Combinación tropical de Mango, Banana y Maracuyá al agua. Súper refrescante.</p>
+          </div>
+          <button onclick="sumarSaborDirecto('Brasil Pepepe')" class="mt-4 w-full py-2 bg-white hover:bg-brand-blue hover:text-white text-brand-blue border border-brand-blue/30 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i><span>Sumar al Pedido</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-10 p-6 rounded-3xl bg-brand-sand/40 border border-brand-sand">
+        <h4 class="font-serif font-bold text-lg text-brand-blue mb-3 flex items-center gap-2">
+          <i data-lucide="wand-2" class="w-4 h-4 text-brand-crimson"></i>
+          <span>¿Indeciso? Cargá una combinación recomendada en 1 clic:</span>
+        </h4>
+        <div class="flex flex-wrap gap-3">
+          <button onclick="cargarPreset(['Dulce de Leche Granizado', 'Chocolate con Almendras', 'Sambayón', 'Chantilly'])" class="px-4 py-2 bg-white hover:bg-brand-blue hover:text-white rounded-xl text-xs font-semibold text-gray-700 shadow-sm border border-brand-sand transition">
+            🇦🇷 <strong>El Trío Argentino:</strong> DDL Granizado + Choco Almendras + Sambayón
+          </button>
+          <button onclick="cargarPreset(['Rocher', 'Kínder Bueno', 'Crema Oreo', 'Súper Dulce de Leche'])" class="px-4 py-2 bg-white hover:bg-brand-blue hover:text-white rounded-xl text-xs font-semibold text-gray-700 shadow-sm border border-brand-sand transition">
+            🍫 <strong>Bomba Chocolatosa:</strong> Rocher + Kínder + Oreo + Súper DDL
+          </button>
+          <button onclick="cargarPreset(['Brasil Pepepe', 'Limón Natural', 'Frutilla al Agua', 'Mascarpone con Frutos del Bosque'])" class="px-4 py-2 bg-white hover:bg-brand-blue hover:text-white rounded-xl text-xs font-semibold text-gray-700 shadow-sm border border-brand-sand transition">
+            🍓 <strong>Fresco Frutal:</strong> Brasil Pepepe + Limón + Frutilla + Mascarpone
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESENTACIONES -->
+  <section id="precios" class="py-16 bg-brand-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-extrabold tracking-widest text-brand-crimson uppercase">Presentaciones Térmicas</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-blue mt-1">Elegí tu tamaño ideal</h2>
+        <p class="text-gray-600 mt-2 text-sm">Empaque térmico de telgopor de alta densidad para asegurar la cadena de frío.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div class="rounded-3xl border border-brand-sand bg-white p-6 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="font-bold text-xl text-brand-dark">1/4 Kilo</h3>
+                <p class="text-xs text-gray-500">Individual o para 2</p>
+              </div>
+              <span class="font-serif font-extrabold text-2xl text-brand-blue">$8.000</span>
+            </div>
+            <ul class="text-sm text-gray-600 space-y-2.5 my-6">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i><span>Hasta <strong>2 sabores</strong></span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i><span>Cucharitas descartables</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i><span>Pote térmico sellado</span></li>
+            </ul>
+          </div>
+          <button onclick="seleccionarPote('1/4 Kilo (Hasta 2 sabores)', 2, 8000)" class="w-full py-3 border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white rounded-xl font-bold text-xs uppercase tracking-wider transition">
+            Elegir 1/4 kg
+          </button>
+        </div>
+
+        <div class="rounded-3xl border border-brand-sand bg-white p-6 flex flex-col justify-between hover:shadow-lg transition">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="font-bold text-xl text-brand-dark">1/2 Kilo</h3>
+                <p class="text-xs text-gray-500">Ideal para compartir</p>
+              </div>
+              <span class="font-serif font-extrabold text-2xl text-brand-blue">$14.000</span>
+            </div>
+            <ul class="text-sm text-gray-600 space-y-2.5 my-6">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i><span>Hasta <strong>3 sabores</strong></span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i><span>Cucharitas y servilletas</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i><span>Pote térmico sellado</span></li>
+            </ul>
+          </div>
+          <button onclick="seleccionarPote('1/2 Kilo (Hasta 3 sabores)', 3, 14000)" class="w-full py-3 border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white rounded-xl font-bold text-xs uppercase tracking-wider transition">
+            Elegir 1/2 kg
+          </button>
+        </div>
+
+        <div class="relative rounded-3xl border-2 border-brand-blue bg-white p-6 flex flex-col justify-between shadow-xl">
+          <div class="absolute -top-3.5 right-6 bg-brand-crimson text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full shadow-sm tracking-wider">
+            Más Vendido
+          </div>
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="font-bold text-xl text-brand-dark">1 Kilo</h3>
+                <p class="text-xs text-gray-500">Para toda la familia</p>
+              </div>
+              <span class="font-serif font-extrabold text-2xl text-brand-blue">$23.000</span>
+            </div>
+            <ul class="text-sm text-gray-600 space-y-2.5 my-6">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i><span>Hasta <strong>4 sabores</strong></span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i><span>Cucharitas y servilletas</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i><span>Pote sellado hermético</span></li>
+            </ul>
+          </div>
+          <button onclick="seleccionarPote('1 Kilo (Hasta 4 sabores)', 4, 23000)" class="w-full py-3 bg-brand-blue hover:bg-brand-blueHover text-white rounded-xl font-bold text-xs uppercase tracking-wider shadow transition">
+            Elegir 1 kg
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTA COMPLETA -->
+  <section id="sabores" class="py-16 bg-white border-t border-brand-sand">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-extrabold tracking-widest text-brand-crimson uppercase">Nuestra Carta Completa</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-blue mt-1">Todos los Sabores Antonysia</h2>
+        <p class="text-gray-600 mt-2 text-sm">Hacé clic en cualquier sabor para agregarlo a tu pote en la sección de pedidos.</p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <button onclick="filtrarCategoria('todos')" class="cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-brand-blue text-white shadow-sm transition">Todos</button>
+        <button onclick="filtrarCategoria('cremas')" class="cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-white text-gray-700 hover:bg-brand-cream border border-brand-sand transition">Cremas Especiales</button>
+        <button onclick="filtrarCategoria('dulces')" class="cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-white text-gray-700 hover:bg-brand-cream border border-brand-sand transition">Dulces de Leche</button>
+        <button onclick="filtrarCategoria('chocolates')" class="cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-white text-gray-700 hover:bg-brand-cream border border-brand-sand transition">Chocolates</button>
+        <button onclick="filtrarCategoria('frutales')" class="cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-white text-gray-700 hover:bg-brand-cream border border-brand-sand transition">Frutales al Agua</button>
+      </div>
+
+      <div id="grid-sabores" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- ARMAR PEDIDO Y PAGOS -->
+  <section id="pedido" class="py-16 bg-brand-cream border-t border-brand-sand">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-bold uppercase mb-2">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Pedido y Checkout Seguro
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-blue">Armá tu Pedido Online</h2>
+        <p class="text-gray-600 text-sm mt-1">Elegí tu pote, tus sabores, sumá adicionales y pagá con Mercado Pago o Transferencia.</p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-brand-sand shadow-xl space-y-8">
+        <div>
+          <label class="block text-sm font-bold text-brand-dark mb-3 flex items-center justify-between">
+            <span>1. Tamaño del pote:</span>
+            <span id="label-precio-actual" class="text-xs text-brand-crimson font-bold">$23.000</span>
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <button type="button" onclick="seleccionarPote('1/4 Kilo (Hasta 2 sabores)', 2, 8000)" id="btn-pote-2" class="pote-option p-4 rounded-2xl border-2 border-gray-200 bg-white text-left font-semibold text-sm hover:border-brand-blue transition">
+              <span class="block text-brand-blue text-xs uppercase font-extrabold">1/4 Kilo • $8.000</span>
+              <span class="text-gray-600 text-xs">Hasta 2 sabores</span>
+            </button>
+            <button type="button" onclick="seleccionarPote('1/2 Kilo (Hasta 3 sabores)', 3, 14000)" id="btn-pote-3" class="pote-option p-4 rounded-2xl border-2 border-gray-200 bg-white text-left font-semibold text-sm hover:border-brand-blue transition">
+              <span class="block text-brand-blue text-xs uppercase font-extrabold">1/2 Kilo • $14.000</span>
+              <span class="text-gray-600 text-xs">Hasta 3 sabores</span>
+            </button>
+            <button type="button" onclick="seleccionarPote('1 Kilo (Hasta 4 sabores)', 4, 23000)" id="btn-pote-4" class="pote-option p-4 rounded-2xl border-2 border-brand-blue bg-brand-cream/50 text-left font-semibold text-sm transition">
+              <span class="block text-brand-blue text-xs uppercase font-extrabold">1 Kilo • $23.000</span>
+              <span class="text-gray-600 text-xs">Hasta 4 sabores</span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <label class="block text-sm font-bold text-brand-dark">2. Sabores elegidos para el pote:</label>
+            <span id="contador-sabores" class="text-xs font-bold text-gray-500 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">0 de 4 seleccionados</span>
+          </div>
+          <div id="lista-seleccionados" class="min-h-[52px] p-3 bg-brand-cream/40 rounded-2xl border border-brand-sand flex flex-wrap gap-2 items-center text-xs text-gray-400">
+            Hacé clic en los sabores del catálogo o elegí un preset arriba.
+          </div>
+        </div>
+
+        <div class="space-y-3 pt-3 border-t border-brand-sand/60">
+          <label class="block text-xs font-extrabold text-brand-blue uppercase tracking-wider">
+            + ¿Querés sumar adicionales? (Opcional)
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 hover:border-brand-blue cursor-pointer bg-white">
+              <input type="checkbox" id="check-cucuruchos" onchange="actualizarTotal()" class="w-4 h-4 text-brand-blue rounded">
+              <div>
+                <span class="font-bold text-gray-800">Pack 4 Cucuruchos Crocantes</span>
+                <span class="block text-gray-500 text-[11px]">+$1.500</span>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 hover:border-brand-blue cursor-pointer bg-white">
+              <input type="checkbox" id="check-vasitos" class="w-4 h-4 text-brand-blue rounded">
+              <div>
+                <span class="font-bold text-gray-800">Vasitos y Cucharitas Extra</span>
+                <span class="block text-green-700 text-[11px] font-semibold">Gratis de cortesía</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="space-y-4 pt-4 border-t border-brand-sand/60">
+          <label class="block text-sm font-bold text-brand-dark">3. Datos de entrega:</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Nombre y Apellido</label>
+              <input type="text" id="input-nombre" placeholder="Ej: Lautaro" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Dirección y Localidad</label>
+              <input type="text" id="input-direccion" placeholder="Ej: Gabino Ezeiza 8679, Loma Hermosa" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Aclaraciones para la entrega (Opcional)</label>
+              <input type="text" id="input-notas" placeholder="Ej: Timbre 2B / Casa rejas negras" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4 pt-4 border-t border-brand-sand/60">
+          <div class="flex items-center justify-between">
+            <label class="block text-sm font-bold text-brand-dark">4. Medio de Pago:</label>
+            <span id="total-a-pagar" class="text-sm font-extrabold text-brand-blue">Total: $23.000</span>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <label class="pago-card relative flex flex-col p-4 rounded-2xl border-2 border-brand-mp bg-sky-50/50 cursor-pointer transition">
+              <input type="radio" name="metodo_pago" value="mercadopago" checked onchange="cambiarMetodoPago('mercadopago')" class="sr-only">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-extrabold uppercase text-sky-700 tracking-wider">Online</span>
+                <i data-lucide="credit-card" class="w-4 h-4 text-sky-600"></i>
+              </div>
+              <span class="font-bold text-sm text-brand-dark">Mercado Pago</span>
+              <span class="text-xs text-gray-500 mt-1">Tarjetas Débito / Crédito o Dinero en cuenta</span>
+            </label>
+
+            <label class="pago-card relative flex flex-col p-4 rounded-2xl border-2 border-gray-200 bg-white cursor-pointer transition">
+              <input type="radio" name="metodo_pago" value="transferencia" onchange="cambiarMetodoPago('transferencia')" class="sr-only">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-extrabold uppercase text-brand-blue tracking-wider">Transferencia</span>
+                <i data-lucide="landmark" class="w-4 h-4 text-brand-blue"></i>
+              </div>
+              <span class="font-bold text-sm text-brand-dark">Alias / CBU</span>
+              <span class="text-xs text-gray-500 mt-1">Transferí desde cualquier banco o billetera</span>
+            </label>
+
+            <label class="pago-card relative flex flex-col p-4 rounded-2xl border-2 border-gray-200 bg-white cursor-pointer transition">
+              <input type="radio" name="metodo_pago" value="efectivo" onchange="cambiarMetodoPago('efectivo')" class="sr-only">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-extrabold uppercase text-green-700 tracking-wider">Efectivo</span>
+                <i data-lucide="banknote" class="w-4 h-4 text-green-600"></i>
+              </div>
+              <span class="font-bold text-sm text-brand-dark">Efectivo al recibir</span>
+              <span class="text-xs text-gray-500 mt-1">Abonás contra entrega al repartidor</span>
+            </label>
+          </div>
+
+          <div id="panel-transferencia" class="hidden bg-brand-cream/60 rounded-2xl p-5 border border-brand-sand space-y-3">
+            <div class="flex items-center gap-2 text-sm font-bold text-brand-blue">
+              <i data-lucide="qr-code" class="w-4 h-4 text-brand-crimson"></i>
+              <span>Datos para transferir:</span>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 bg-white rounded-xl border border-brand-sand flex items-center justify-between">
+                <div>
+                  <span class="block text-gray-500 text-[10px] font-bold uppercase">Alias</span>
+                  <span class="font-mono font-bold text-sm text-brand-dark">antonysia.helados</span>
+                </div>
+                <button type="button" onclick="copiarAlPortapapeles('antonysia.helados', this)" class="px-2.5 py-1 bg-brand-blue text-white rounded-lg text-[11px] font-semibold hover:bg-brand-blueHover transition">Copiar</button>
+              </div>
+
+              <div class="p-3 bg-white rounded-xl border border-brand-sand flex items-center justify-between">
+                <div>
+                  <span class="block text-gray-500 text-[10px] font-bold uppercase">CVU / CBU</span>
+                  <span class="font-mono font-bold text-xs text-brand-dark">0000003100012345678901</span>
+                </div>
+                <button type="button" onclick="copiarAlPortapapeles('0000003100012345678901', this)" class="px-2.5 py-1 bg-brand-blue text-white rounded-lg text-[11px] font-semibold hover:bg-brand-blueHover transition">Copiar</button>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-gray-600 flex items-center justify-between">
+              <span><strong>Titular:</strong> Antonysia Helados</span>
+              <span class="text-green-700 font-bold">Comprobante por WhatsApp</span>
+            </div>
+          </div>
+
+          <div id="panel-efectivo" class="hidden bg-brand-cream/60 rounded-2xl p-4 border border-brand-sand">
+            <label class="block text-xs font-semibold text-gray-700 mb-1">¿Abonás con billete exacto o necesitás cambio?</label>
+            <input type="text" id="input-cambio" placeholder="Ej: Pago con $30.000 / Traer cambio de $7.000" class="w-full px-4 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <button type="button" id="btn-accion-principal" onclick="procesarPedido()" class="w-full py-4 bg-brand-mp hover:bg-brand-mpHover text-white rounded-2xl font-bold text-base shadow-xl shadow-sky-500/25 hover:shadow-2xl transition flex items-center justify-center gap-3 transform active:scale-98">
+            <i data-lucide="credit-card" class="w-5 h-5"></i>
+            <span id="txt-btn-accion">Pagar con Mercado Pago y Confirmar Pedido</span>
+          </button>
+          <p id="subtexto-accion" class="text-center text-xs text-gray-500 mt-2">
+            Podrás abonar con tarjetas de débito/crédito o dinero en cuenta de Mercado Pago.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="py-16 bg-white border-t border-brand-sand">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="flex items-center justify-center gap-1 text-amber-500 mb-2">
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-blue">Lo que dicen nuestros vecinos</h2>
+        <p class="text-gray-600 mt-1 text-sm">Opiniones de clientes que ya disfrutan Antonysia en Tres de Febrero y San Martín.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-3xl bg-brand-cream/40 border border-brand-sand flex flex-col justify-between">
+          <p class="text-sm text-gray-700 italic leading-relaxed">
+            "El sabor Rocher y el Pistacho son de otro planeta. La textura es súper cremosa, se nota que usan ingredientes de verdad. Llegó en 25 minutos impecable."
+          </p>
+          <div class="mt-4 pt-4 border-t border-brand-sand flex items-center justify-between text-xs">
+            <span class="font-bold text-brand-blue">Florencia M.</span>
+            <span class="text-gray-500">Loma Hermosa</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-brand-cream/40 border border-brand-sand flex flex-col justify-between">
+          <p class="text-sm text-gray-700 italic leading-relaxed">
+            "Por fin una heladería artesanal en serio en la zona. El Súper Dulce de Leche tiene abundante dulce natural sembrado. Excelente atención por WhatsApp."
+          </p>
+          <div class="mt-4 pt-4 border-t border-brand-sand flex items-center justify-between text-xs">
+            <span class="font-bold text-brand-blue">Matías G.</span>
+            <span class="text-gray-500">Villa Bosch</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-brand-cream/40 border border-brand-sand flex flex-col justify-between">
+          <p class="text-sm text-gray-700 italic leading-relaxed">
+            "El sabor tropical Brasil Pepepe es riquísimo y refrescante. Además el pote viene muy bien cerrado y con frío perfecto. 10 puntos."
+          </p>
+          <div class="mt-4 pt-4 border-t border-brand-sand flex items-center justify-between text-xs">
+            <span class="font-bold text-brand-blue">Lucas R.</span>
+            <span class="text-gray-500">San Martín</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-brand-cream border-t border-brand-sand">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <span class="text-xs font-extrabold tracking-widest text-brand-crimson uppercase">Dudas Comunes</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-blue mt-1">Preguntas Frecuentes</h2>
+        <p class="text-gray-600 text-sm mt-1">Todo lo que necesitás saber sobre tu pedido de helado.</p>
+      </div>
+
+      <div class="space-y-4">
+        <details class="group bg-white p-5 rounded-2xl border border-brand-sand cursor-pointer">
+          <summary class="flex justify-between items-center font-bold text-sm text-brand-blue">
+            <span>¿Cómo garantizan que el helado llegue a la temperatura ideal?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-open:rotate-180 transition transform"></i>
+          </summary>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+            Utilizamos potes térmicos de telgopor de alta densidad sellados herméticamente y mochilas térmicas aislantes para mantener la temperatura y textura exacta.
+          </p>
+        </details>
+
+        <details class="group bg-white p-5 rounded-2xl border border-brand-sand cursor-pointer">
+          <summary class="flex justify-between items-center font-bold text-sm text-brand-blue">
+            <span>¿Qué medios de pago aceptan?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-open:rotate-180 transition transform"></i>
+          </summary>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+            Aceptamos pago online con Mercado Pago (débito, crédito y dinero en cuenta), transferencias bancarias con Alias / CBU, y efectivo contra entrega.
+          </p>
+        </details>
+
+        <details class="group bg-white p-5 rounded-2xl border border-brand-sand cursor-pointer">
+          <summary class="flex justify-between items-center font-bold text-sm text-brand-blue">
+            <span>¿Cómo es la conservación recomendada si me sobra helado?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-open:rotate-180 transition transform"></i>
+          </summary>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+            Guardalo bien cerrado en el freezer a -18°C. Retiralo 3 a 5 minutos antes de servir para recuperar su textura artesanal original.
+          </p>
+        </details>
+
+        <details class="group bg-white p-5 rounded-2xl border border-brand-sand cursor-pointer">
+          <summary class="flex justify-between items-center font-bold text-sm text-brand-blue">
+            <span>¿Cuáles son las zonas exactas de delivery?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-open:rotate-180 transition transform"></i>
+          </summary>
+          <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+            Loma Hermosa, Tres de Febrero, San Martín, Caseros, Villa Bosch y zonas aledañas.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- COBERTURA -->
+  <section id="cobertura" class="py-16 bg-white border-t border-brand-sand">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sand text-brand-blue text-xs font-extrabold uppercase">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-crimson"></i> Ubicación y Horarios
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-blue">Delivery en tu barrio</h2>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Elaboramos helado fresco en nuestro obrador para asegurar la máxima calidad en cada pedido.
+          </p>
+
+          <div class="space-y-3 text-sm text-gray-700">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-brand-cream shadow-sm flex items-center justify-center text-brand-crimson flex-shrink-0">
+                <i data-lucide="navigation" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <strong class="block text-brand-blue">Ubicación del Obrador:</strong>
+                <span>Gabino Ezeiza 8679, Loma Hermosa, Buenos Aires.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-brand-cream shadow-sm flex items-center justify-center text-brand-crimson flex-shrink-0">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <strong class="block text-brand-blue">Días y Horarios de Atención:</strong>
+                <span class="space-y-1 block mt-1">
+                  <span class="block"><strong>Jueves y Viernes:</strong> 15:00 a 00:00 hs.</span>
+                  <span class="block"><strong>Sábados y Domingos:</strong> Todo el día (12:00 a 00:00 hs).</span>
+                  <span class="block text-gray-500 text-xs font-medium">Lunes, Martes y Miércoles: Cerrado (Elaboración).</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-brand-cream shadow-sm flex items-center justify-center text-brand-crimson flex-shrink-0">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <strong class="block text-brand-blue">WhatsApp de Pedidos:</strong>
+                <span>011 4490-2133 / 011 5109-1271</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl bg-brand-cream p-8 border border-brand-sand shadow-md text-center space-y-4">
+          <div class="w-16 h-16 bg-white text-brand-crimson rounded-2xl flex items-center justify-center mx-auto shadow-sm">
+            <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-serif font-bold text-2xl text-brand-blue">Compromiso Antonysia</h3>
+          <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+            "El helado que más te gusta". Elaboramos con dedicación artesanal, cuidando cada detalle para que compartir un helado en familia sea una experiencia memorable.
+          </p>
+          <div class="pt-2">
+            <a href="https://instagram.com/antonysia.helados" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-brand-crimson hover:underline">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+              <span>Seguinos en @antonysia.helados</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-white py-12 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-brand-blue flex items-center justify-center text-white">
+            <i data-lucide="ice-cream-2" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span class="font-serif text-xl font-bold">Antonysia</span>
+            <span class="block text-[10px] text-gray-400 uppercase tracking-widest">Helados Artesanales • Gabino Ezeiza 8679, Loma Hermosa</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 text-xs text-gray-400 font-medium">
+          <a href="#destacados" class="hover:text-white transition">Estrellas</a>
+          <a href="#sabores" class="hover:text-white transition">Sabores</a>
+          <a href="#precios" class="hover:text-white transition">Precios</a>
+          <a href="#testimonios" class="hover:text-white transition">Opiniones</a>
+          <a href="#pedido" class="hover:text-white transition">Pedir</a>
+        </div>
+
+        <p class="text-xs text-gray-500 text-center md:text-right">
+          © <span id="current-year"></span> Antonysia Helados. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const SABORES = [
+      { nombre: "Pistacho Italiano", categoria: "cremas", desc: "Elaborado con 100% pasta pura de pistacho italiano.", tag: "⭐ Autor" },
+      { nombre: "Rocher", categoria: "cremas", desc: "Crema de avellanas con bombón crocante y chocolate con leche.", tag: "🔥 Más Pedido" },
+      { nombre: "Crema Oreo", categoria: "cremas", desc: "Crema americana con trozos crocantes de galletitas Oreo.", tag: "" },
+      { nombre: "Mascarpone con Frutos del Bosque", categoria: "cremas", desc: "Queso mascarpone suave veteado con frutos rojos naturales.", tag: "" },
+      { nombre: "Sambayón", categoria: "cremas", desc: "Clásica receta tradicional con yemas y vino marsala / oporto.", tag: "" },
+      { nombre: "Tiramisú", categoria: "cremas", desc: "Crema al café con cacao y bizcochuelo embebido.", tag: "" },
+      { nombre: "Mousse de Limón", categoria: "cremas", desc: "Suave y refrescante crema batida al limón natural.", tag: "" },
+      { nombre: "Flan con Dulce de Leche", categoria: "cremas", desc: "Sabor a flan casero sembrado con dulce de leche.", tag: "" },
+      { nombre: "Lemon Pie", categoria: "cremas", desc: "Crema de limón con masa crumble y merengue.", tag: "" },
+      { nombre: "Banana Split", categoria: "cremas", desc: "Crema de banana natural con dulce de leche y chocolate.", tag: "" },
+      { nombre: "Kínder Bueno", categoria: "cremas", desc: "Crema de avellana blanca y chocolate con leche.", tag: "" },
+      { nombre: "Menta Granizada", categoria: "cremas", desc: "Crema de menta fresca con chips de chocolate amargo.", tag: "" },
+      { nombre: "Frutilla a la Crema", categoria: "cremas", desc: "Frutillas seleccionadas con crema chantilly.", tag: "" },
+      { nombre: "Chantilly", categoria: "cremas", desc: "Pura crema batida avainillada suave.", tag: "" },
+      { nombre: "Granizado", categoria: "cremas", desc: "Crema americana clásica sembrada con chocolate picado.", tag: "" },
+      { nombre: "Súper Dulce de Leche", categoria: "dulces", desc: "Con abundante dulce de leche natural repostero sembrado.", tag: "👑 Clásico" },
+      { nombre: "Dulce de Leche Granizado", categoria: "dulces", desc: "Dulce de leche con lluvia de chocolate amargo picado.", tag: "" },
+      { nombre: "Dulce de Leche Clásico", categoria: "dulces", desc: "Tradicional dulce de leche artesanal argentino.", tag: "" },
+      { nombre: "Dulce de Leche Bombón", categoria: "dulces", desc: "Con bombones rellenos de dulce de leche.", tag: "" },
+      { nombre: "Chocolate con Almendras", categoria: "chocolates", desc: "Chocolate con almendras tostadas enteras.", tag: "🔥 Destacado" },
+      { nombre: "Chocolate Clásico", categoria: "chocolates", desc: "Puro cacao seleccionado, intenso y cremoso.", tag: "" },
+      { nombre: "Chocolate Africano (Vegano)", categoria: "chocolates", desc: "Chocolate semi amargo puro sin lácteos.", tag: "🌱 Vegano" },
+      { nombre: "Jamaica", categoria: "chocolates", desc: "Chocolate con toque especial caribeño y licor suave.", tag: "" },
+      { nombre: "Brasil Pepepe", categoria: "frutales", desc: "Combinación tropical única de Mango, Banana y Maracuyá.", tag: "🌱 Vegano" },
+      { nombre: "Limón Natural", categoria: "frutales", desc: "Limón exprimido fresco, súper refrescante y liviano.", tag: "🌱 Vegano" },
+      { nombre: "Frutilla al Agua", categoria: "frutales", desc: "Pura pulpa de frutilla natural de estación.", tag: "🌱 Vegano" }
+    ];
+
+    let poteActual = { nombre: "1 Kilo (Hasta 4 sabores)", maxSabores: 4, precio: 23000 };
+    let saboresSeleccionados = [];
+    let metodoPagoSeleccionado = "mercadopago";
+
+    const CONFIG_PAGOS = {
+      whatsapp: "5491144902133",
+      alias: "antonysia.helados",
+      cvu: "0000003100012345678901",
+      titular: "Antonysia Helados",
+      linksMercadoPago: {
+        2: "https://mpago.la/",
+        3: "https://mpago.la/",
+        4: "https://mpago.la/"
+      }
+    };
+
+    function renderSabores(categoria = "todos") {
+      const grid = document.getElementById("grid-sabores");
+      grid.innerHTML = "";
+      const filtrados = categoria === "todos" ? SABORES : SABORES.filter(s => s.categoria === categoria);
+
+      filtrados.forEach(sabor => {
+        const isSelected = saboresSeleccionados.includes(sabor.nombre);
+        const card = document.createElement("div");
+        card.className = `p-4 rounded-2xl bg-white border transition cursor-pointer flex flex-col justify-between hover:shadow-md ${
+          isSelected ? "border-brand-blue ring-2 ring-brand-blue/20 bg-brand-cream/30" : "border-brand-sand hover:border-brand-blue"
+        }`;
+        card.onclick = () => toggleSabor(sabor.nombre);
+
+        card.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between gap-2">
+              <h4 class="font-bold text-sm text-brand-dark">${sabor.nombre}</h4>
+              <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition ${
+                isSelected ? "bg-brand-blue text-white" : "bg-gray-100 text-gray-400"
+              }">
+                ${isSelected ? "✓" : "+"}
+              </span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1 leading-relaxed">${sabor.desc}</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-gray-100 flex items-center justify-between text-[11px]">
+            <span class="uppercase tracking-wider text-gray-400 font-semibold">${sabor.tag || sabor.categoria}</span>
+            <span class="${isSelected ? 'text-brand-blue font-bold' : 'text-gray-400'}">
+              ${isSelected ? 'Seleccionado' : 'Tocar para sumar'}
+            </span>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+      lucide.createIcons();
+    }
+
+    function filtrarCategoria(cat) {
+      document.querySelectorAll(".cat-btn").forEach(btn => {
+        btn.classList.remove("bg-brand-blue", "text-white");
+        btn.classList.add("bg-white", "text-gray-700", "border", "border-brand-sand");
+      });
+      event.target.classList.remove("bg-white", "text-gray-700", "border", "border-brand-sand");
+      event.target.classList.add("bg-brand-blue", "text-white");
+      renderSabores(cat);
+    }
+
+    function seleccionarPote(nombre, max, precio) {
+      poteActual = { nombre, maxSabores: max, precio };
+      document.querySelectorAll(".pote-option").forEach(b => {
+        b.classList.remove("border-brand-blue", "bg-brand-cream/50");
+        b.classList.add("border-gray-200", "bg-white");
+      });
+      const activeBtn = document.getElementById(`btn-pote-${max}`);
+      if (activeBtn) {
+        activeBtn.classList.remove("border-gray-200", "bg-white");
+        activeBtn.classList.add("border-brand-blue", "bg-brand-cream/50");
+      }
+      if (saboresSeleccionados.length > max) {
+        saboresSeleccionados = saboresSeleccionados.slice(0, max);
+      }
+      actualizarTotal();
+      actualizarUI();
+    }
+
+    function sumarSaborDirecto(nombre) {
+      if (!saboresSeleccionados.includes(nombre)) {
+        if (saboresSeleccionados.length >= poteActual.maxSabores) {
+          alert(`Este pote permite hasta ${poteActual.maxSabores} sabores. Podés deseleccionar uno para cambiarlo.`);
+        } else {
+          saboresSeleccionados.push(nombre);
+        }
+      }
+      actualizarUI();
+      document.getElementById("pedido").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function cargarPreset(sabores) {
+      saboresSeleccionados = sabores.slice(0, poteActual.maxSabores);
+      actualizarUI();
+      document.getElementById("pedido").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleSabor(nombre) {
+      const idx = saboresSeleccionados.indexOf(nombre);
+      if (idx > -1) {
+        saboresSeleccionados.splice(idx, 1);
+      } else {
+        if (saboresSeleccionados.length >= poteActual.maxSabores) {
+          alert(`Este pote permite un máximo de ${poteActual.maxSabores} sabores. Podés deseleccionar uno para cambiarlo.`);
+          return;
+        }
+        saboresSeleccionados.push(nombre);
+      }
+      actualizarUI();
+    }
+
+    function actualizarTotal() {
+      let total = poteActual.precio;
+      const cucuruchos = document.getElementById("check-cucuruchos");
+      if (cucuruchos && cucuruchos.checked) {
+        total += 1500;
+      }
+      document.getElementById("label-precio-actual").innerText = `$${poteActual.precio.toLocaleString('es-AR')}`;
+      document.getElementById("total-a-pagar").innerText = `Total: $${total.toLocaleString('es-AR')}`;
+    }
+
+    function cambiarMetodoPago(metodo) {
+      metodoPagoSeleccionado = metodo;
+      const cards = document.querySelectorAll(".pago-card");
+      cards.forEach(c => {
+        c.classList.remove("border-brand-mp", "bg-sky-50/50", "border-brand-blue", "bg-brand-cream/50", "border-green-600", "bg-green-50/50");
+        c.classList.add("border-gray-200", "bg-white");
+      });
+
+      const pnlTransferencia = document.getElementById("panel-transferencia");
+      const pnlEfectivo = document.getElementById("panel-efectivo");
+      const btn = document.getElementById("btn-accion-principal");
+      const subtexto = document.getElementById("subtexto-accion");
+
+      pnlTransferencia.classList.add("hidden");
+      pnlEfectivo.classList.add("hidden");
+
+      if (metodo === "mercadopago") {
+        cards[0].classList.add("border-brand-mp", "bg-sky-50/50");
+        cards[0].classList.remove("border-gray-200", "bg-white");
+        
+        btn.className = "w-full py-4 bg-brand-mp hover:bg-brand-mpHover text-white rounded-2xl font-bold text-base shadow-xl shadow-sky-500/25 hover:shadow-2xl transition flex items-center justify-center gap-3 transform active:scale-98";
+        btn.innerHTML = `<i data-lucide="credit-card" class="w-5 h-5"></i><span>Pagar con Mercado Pago y Confirmar Pedido</span>`;
+        subtexto.innerText = "Podrás abonar con tarjetas de débito/crédito o dinero en cuenta de Mercado Pago.";
+      } else if (metodo === "transferencia") {
+        cards.classList.add("border-brand-blue", "bg-brand-cream/50");
+        cards.classList.remove("border-gray-200", "bg-white");
+        pnlTransferencia.classList.remove("hidden");
+
+        btn.className = "w-full py-4 bg-brand-blue hover:bg-brand-blueHover text-white rounded-2xl font-bold text-base shadow-xl shadow-sky-950/20 hover:shadow-2xl transition flex items-center justify-center gap-3 transform active:scale-98";
+        btn.innerHTML = `<i data-lucide="send" class="w-5 h-5"></i><span>Enviar Pedido y Adjuntar Comprobante por WhatsApp</span>`;
+        subtexto.innerText = "Copiá el Alias o CBU arriba, transferí y envianos el comprobante por WhatsApp.";
+      } else if (metodo === "efectivo") {
+        cards.classList.add("border-green-600", "bg-green-50/50");
+        cards.classList.remove("border-gray-200", "bg-white");
+        pnlEfectivo.classList.remove("hidden");
+
+        btn.className = "w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-2xl font-bold text-base shadow-xl shadow-green-600/25 hover:shadow-2xl transition flex items-center justify-center gap-3 transform active:scale-98";
+        btn.innerHTML = `<i data-lucide="check-circle-2" class="w-5 h-5"></i><span>Confirmar Pedido (Pagar en Efectivo)</span>`;
+        subtexto.innerText = "El pedido se enviará directo a WhatsApp para preparar el despacho y abonar al repartidor.";
+      }
+
+      lucide.createIcons();
+    }
+
+    function copiarAlPortapapeles(texto, btnElement) {
+      navigator.clipboard.writeText(texto).then(() => {
+        const textoOriginal = btnElement.innerText;
+        btnElement.innerText = "¡Copiado!";
+        btnElement.classList.remove("bg-brand-blue");
+        btnElement.classList.add("bg-green-600");
+        setTimeout(() => {
+          btnElement.innerText = textoOriginal;
+          btnElement.classList.remove("bg-green-600");
+          btnElement.classList.add("bg-brand-blue");
+        }, 2000);
+      });
+    }
+
+    function actualizarUI() {
+      const contador = document.getElementById("contador-sabores");
+      contador.innerText = `${saboresSeleccionados.length} de ${poteActual.maxSabores} seleccionados`;
+      if (saboresSeleccionados.length === poteActual.maxSabores) {
+        contador.className = "text-xs font-bold text-white bg-green-600 px-3 py-1 rounded-full";
+      } else {
+        contador.className = "text-xs font-bold text-gray-600 bg-gray-100 px-3 py-1 rounded-full border border-gray-200";
+      }
+
+      const lista = document.getElementById("lista-seleccionados");
+      if (saboresSeleccionados.length === 0) {
+        lista.innerHTML = `<span class="text-gray-400 text-xs">Hacé clic en los sabores del catálogo para sumarlos (máximo ${poteActual.maxSabores}).</span>`;
+      } else {
+        lista.innerHTML = "";
+        saboresSeleccionados.forEach(s => {
+          const chip = document.createElement("span");
+          chip.className = "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-blue text-white text-xs font-bold shadow-sm";
+          chip.innerHTML = `${s} <button onclick="toggleSabor('${s}')" class="hover:text-red-200 ml-1 font-extrabold text-sm">×</button>`;
+          lista.appendChild(chip);
+        });
+      }
+      renderSabores();
+    }
+
+    function procesarPedido() {
+      const nombre = document.getElementById("input-nombre").value.trim();
+      const direccion = document.getElementById("input-direccion").value.trim();
+      const notas = document.getElementById("input-notas").value.trim();
+      const cambio = document.getElementById("input-cambio") ? document.getElementById("input-cambio").value.trim() : "";
+      const tieneCucuruchos = document.getElementById("check-cucuruchos").checked;
+      const tieneVasitos = document.getElementById("check-vasitos").checked;
+
+      if (saboresSeleccionados.length === 0) {
+        alert("Por favor seleccioná al menos un sabor antes de continuar.");
+        return;
+      }
+      if (!direccion) {
+        alert("Por favor ingresá tu dirección para coordinar la entrega.");
+        return;
+      }
+
+      let medioPagoTexto = "";
+      if (metodoPagoSeleccionado === "mercadopago") {
+        medioPagoTexto = "💳 Mercado Pago (Pago Online)";
+      } else if (metodoPagoSeleccionado === "transferencia") {
+        medioPagoTexto = `🏦 Transferencia Bancaria (Alias: ${CONFIG_PAGOS.alias})`;
+      } else {
+        medioPagoTexto = `💵 Efectivo contra entrega ${cambio ? `(Abono: ${cambio})` : ''}`;
+      }
+
+      let total = poteActual.precio + (tieneCucuruchos ? 1500 : 0);
+
+      let mensaje = `👋 ¡Hola Antonysia! Quiero confirmar el siguiente pedido:%0A%0A`;
+      mensaje += `🍧 *Presentación:* ${poteActual.nombre}%0A`;
+      mensaje += `🍨 *Sabores elegidos:*%0A`;
+      saboresSeleccionados.forEach(s => {
+        mensaje += `  • ${s}%0A`;
+      });
+      if (tieneCucuruchos || tieneVasitos) {
+        mensaje += `%0A➕ *Adicionales:*%0A`;
+        if (tieneCucuruchos) mensaje += `  • Pack 4 Cucuruchos Crocantes (+$1.500)%0A`;
+        if (tieneVasitos) mensaje += `  • Vasitos y cucharitas extra (Gratis)%0A`;
+      }
+      mensaje += `%0A💰 *Total:* $${total.toLocaleString('es-AR')}%0A`;
+      mensaje += `👤 *Cliente:* ${nombre || "A coordinar"}%0A`;
+      mensaje += `📍 *Dirección de entrega:* ${direccion}%0A`;
+      mensaje += `💳 *Método de Pago:* ${medioPagoTexto}%0A`;
+      if (notas) {
+        mensaje += `📝 *Aclaraciones:* ${notas}%0A`;
+      }
+      mensaje += `%0A¿Me confirman recepción y tiempo estimado de entrega? ¡Muchas gracias!`;
+
+      if (metodoPagoSeleccionado === "mercadopago") {
+        const linkMP = CONFIG_PAGOS.linksMercadoPago[poteActual.maxSabores] || "https://mpago.la/";
+        window.open(linkMP, "_blank");
+      }
+
+      setTimeout(() => {
+        const urlWA = `https://wa.me/${CONFIG_PAGOS.whatsapp}?text=${mensaje}`;
+        window.open(urlWA, "_blank");
+      }, 600);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("current-year").innerText = new Date().getFullYear();
+      actualizarTotal();
+      actualizarUI();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
