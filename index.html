@@ -22,14 +22,14 @@
           },
           colors: {
             brand: {
-              cream: '#EDE8D0',
-              sand: '#EDDCC6',
-              blue: '#005B93',
+              cream: '#EDE8D0',     // Crema oficial
+              sand: '#EDDCC6',      // Arena suave
+              blue: '#005B93',      // Azul marino oficial
               blueHover: '#004875',
-              crimson: '#BF4646',
+              crimson: '#BF4646',   // Rojo frambuesa
               crimsonHover: '#A33636',
               dark: '#1C1917',
-              mp: '#009EE3',
+              mp: '#009EE3',        // Mercado Pago
               mpHover: '#0084BF'
             }
           }
@@ -39,7 +39,7 @@
   </script>
   <style>
     .glass-nav {
-      background: rgba(237, 232, 208, 0.92);
+      background: rgba(237, 232, 208, 0.94);
       backdrop-filter: blur(12px);
     }
   </style>
@@ -373,11 +373,11 @@
               </li>
               <li class="flex items-center gap-2">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-green-600 flex-shrink-0"></i>
-                <span>Cucharitas y servilletas</span>
+                <span>Pote térmico de 1 kg</span>
               </li>
               <li class="flex items-center gap-2">
                 <i data-lucide="check-circle-2" class="w-4 h-4 text-green-600 flex-shrink-0"></i>
-                <span>Pote térmico de 1 kg</span>
+                <span>Cucharitas y servilletas</span>
               </li>
             </ul>
           </div>
@@ -510,37 +510,35 @@
           </div>
           
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <label class="pago-card relative flex flex-col p-4 rounded-2xl border-2 border-brand-mp bg-sky-50/50 cursor-pointer transition">
-              <input type="radio" name="metodo_pago" value="mercadopago" checked onchange="cambiarMetodoPago('mercadopago')" class="sr-only">
+            <button type="button" onclick="cambiarMetodoPago('mercadopago')" id="card-pago-mercadopago" class="pago-card p-4 rounded-2xl border-2 border-brand-mp bg-sky-50/50 text-left transition transform active:scale-98">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-xs font-extrabold uppercase text-sky-700 tracking-wider">Online</span>
                 <i data-lucide="credit-card" class="w-4 h-4 text-sky-600"></i>
               </div>
-              <span class="font-bold text-sm text-brand-dark">Mercado Pago</span>
-              <span class="text-xs text-gray-500 mt-1">Tarjetas, Dinero en cuenta, Rapipago/Pago Fácil</span>
-            </label>
+              <span class="font-bold text-sm text-brand-dark block">Mercado Pago</span>
+              <span class="text-xs text-gray-500 mt-1 block">Tarjetas, Dinero en cuenta, Rapipago/Pago Fácil</span>
+            </button>
 
-            <label class="pago-card relative flex flex-col p-4 rounded-2xl border-2 border-gray-200 bg-white cursor-pointer transition">
-              <input type="radio" name="metodo_pago" value="transferencia" onchange="cambiarMetodoPago('transferencia')" class="sr-only">
+            <button type="button" onclick="cambiarMetodoPago('transferencia')" id="card-pago-transferencia" class="pago-card p-4 rounded-2xl border-2 border-gray-200 bg-white text-left transition transform active:scale-98">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-xs font-extrabold uppercase text-brand-blue tracking-wider">Transferencia</span>
                 <i data-lucide="landmark" class="w-4 h-4 text-brand-blue"></i>
               </div>
-              <span class="font-bold text-sm text-brand-dark">Alias / CBU</span>
-              <span class="text-xs text-gray-500 mt-1">Transferí desde cualquier banco o billetera</span>
-            </label>
+              <span class="font-bold text-sm text-brand-dark block">Alias / CBU</span>
+              <span class="text-xs text-gray-500 mt-1 block">Transferí desde cualquier banco o billetera</span>
+            </button>
 
-            <label class="pago-card relative flex flex-col p-4 rounded-2xl border-2 border-gray-200 bg-white cursor-pointer transition">
-              <input type="radio" name="metodo_pago" value="efectivo" onchange="cambiarMetodoPago('efectivo')" class="sr-only">
+            <button type="button" onclick="cambiarMetodoPago('efectivo')" id="card-pago-efectivo" class="pago-card p-4 rounded-2xl border-2 border-gray-200 bg-white text-left transition transform active:scale-98">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-xs font-extrabold uppercase text-green-700 tracking-wider">Efectivo</span>
                 <i data-lucide="banknote" class="w-4 h-4 text-green-600"></i>
               </div>
-              <span class="font-bold text-sm text-brand-dark">Efectivo al recibir</span>
-              <span class="text-xs text-gray-500 mt-1">Abonás contra entrega al repartidor</span>
-            </label>
+              <span class="font-bold text-sm text-brand-dark block">Efectivo al recibir</span>
+              <span class="text-xs text-gray-500 mt-1 block">Abonás contra entrega al repartidor</span>
+            </button>
           </div>
 
+          <!-- PANEL DATOS TRANSFERENCIA -->
           <div id="panel-transferencia" class="hidden bg-brand-cream/60 rounded-2xl p-5 border border-brand-sand space-y-3">
             <div class="flex items-center gap-2 text-sm font-bold text-brand-blue">
               <i data-lucide="qr-code" class="w-4 h-4 text-brand-crimson"></i>
@@ -571,12 +569,15 @@
             </div>
           </div>
 
+          <!-- PANEL EFECTIVO -->
           <div id="panel-efectivo" class="hidden bg-brand-cream/60 rounded-2xl p-4 border border-brand-sand">
             <label class="block text-xs font-semibold text-gray-700 mb-1">¿Abonás con billete exacto o necesitás cambio?</label>
             <input type="text" id="input-cambio" placeholder="Ej: Pago con $30.000 / Traer cambio de $7.000" class="w-full px-4 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
           </div>
+
         </div>
 
+        <!-- Botón de Acción Dinámico -->
         <div class="pt-2">
           <button type="button" id="btn-accion-principal" onclick="procesarPedido()" class="w-full py-4 bg-brand-mp hover:bg-brand-mpHover text-white rounded-2xl font-bold text-base shadow-xl shadow-sky-500/25 hover:shadow-2xl transition flex items-center justify-center gap-3 transform active:scale-98">
             <i data-lucide="credit-card" class="w-5 h-5"></i>
@@ -586,7 +587,9 @@
             Podrás abonar con tarjetas de débito/crédito, dinero en cuenta o cupones de Rapipago/Pago Fácil.
           </p>
         </div>
+
       </div>
+
     </div>
   </section>
 
@@ -761,9 +764,9 @@
             "El helado que más te gusta". Elaboramos con dedicación artesanal, cuidando cada detalle para que compartir un helado en familia sea siempre una experiencia memorable.
           </p>
           <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="https://instagram.com/antonisiahelados_" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-brand-sand text-xs font-bold text-brand-crimson hover:shadow transition">
+            <a href="https://instagram.com/antonysiahelados_" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-brand-sand text-xs font-bold text-brand-crimson hover:shadow transition">
               <i data-lucide="instagram" class="w-4 h-4"></i>
-              <span>@antonisiahelados_</span>
+              <span>@antonysiahelados_</span>
             </a>
             <a href="https://wa.me/5491162419013" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-green-600 text-white text-xs font-bold hover:bg-green-700 transition shadow">
               <i data-lucide="message-circle" class="w-4 h-4"></i>
@@ -959,10 +962,17 @@
 
     function cambiarMetodoPago(metodo) {
       metodoPagoSeleccionado = metodo;
-      const cards = document.querySelectorAll(".pago-card");
-      cards.forEach(c => {
-        c.classList.remove("border-brand-mp", "bg-sky-50/50", "border-brand-blue", "bg-brand-cream/50", "border-green-600", "bg-green-50/50");
-        c.classList.add("border-gray-200", "bg-white");
+      
+      const cards = {
+        mercadopago: document.getElementById("card-pago-mercadopago"),
+        transferencia: document.getElementById("card-pago-transferencia"),
+        efectivo: document.getElementById("card-pago-efectivo")
+      };
+
+      Object.values(cards).forEach(c => {
+        if (c) {
+          c.className = "pago-card p-4 rounded-2xl border-2 border-gray-200 bg-white text-left transition transform active:scale-98";
+        }
       });
 
       const pnlTransferencia = document.getElementById("panel-transferencia");
@@ -974,25 +984,19 @@
       pnlEfectivo.classList.add("hidden");
 
       if (metodo === "mercadopago") {
-        cards[0].classList.add("border-brand-mp", "bg-sky-50/50");
-        cards[0].classList.remove("border-gray-200", "bg-white");
-        
+        if (cards.mercadopago) cards.mercadopago.className = "pago-card p-4 rounded-2xl border-2 border-brand-mp bg-sky-50/50 text-left transition transform active:scale-98";
         btn.className = "w-full py-4 bg-brand-mp hover:bg-brand-mpHover text-white rounded-2xl font-bold text-base shadow-xl shadow-sky-500/25 hover:shadow-2xl transition flex items-center justify-center gap-3 transform active:scale-98";
         btn.innerHTML = `<i data-lucide="credit-card" class="w-5 h-5"></i><span>Pagar con Mercado Pago y Confirmar Pedido</span>`;
         subtexto.innerText = "Podrás abonar con tarjetas de débito/crédito, dinero en cuenta o cupones de Rapipago/Pago Fácil.";
       } else if (metodo === "transferencia") {
-        cards.classList.add("border-brand-blue", "bg-brand-cream/50");
-        cards.classList.remove("border-gray-200", "bg-white");
+        if (cards.transferencia) cards.transferencia.className = "pago-card p-4 rounded-2xl border-2 border-brand-blue bg-brand-cream/50 text-left transition transform active:scale-98";
         pnlTransferencia.classList.remove("hidden");
-
         btn.className = "w-full py-4 bg-brand-blue hover:bg-brand-blueHover text-white rounded-2xl font-bold text-base shadow-xl shadow-sky-950/20 hover:shadow-2xl transition flex items-center justify-center gap-3 transform active:scale-98";
         btn.innerHTML = `<i data-lucide="send" class="w-5 h-5"></i><span>Enviar Pedido y Adjuntar Comprobante por WhatsApp</span>`;
         subtexto.innerText = "Copiá el Alias o CBU arriba, transferí y envianos el comprobante por WhatsApp.";
       } else if (metodo === "efectivo") {
-        cards.classList.add("border-green-600", "bg-green-50/50");
-        cards.classList.remove("border-gray-200", "bg-white");
+        if (cards.efectivo) cards.efectivo.className = "pago-card p-4 rounded-2xl border-2 border-green-600 bg-green-50/50 text-left transition transform active:scale-98";
         pnlEfectivo.classList.remove("hidden");
-
         btn.className = "w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-2xl font-bold text-base shadow-xl shadow-green-600/25 hover:shadow-2xl transition flex items-center justify-center gap-3 transform active:scale-98";
         btn.innerHTML = `<i data-lucide="check-circle-2" class="w-5 h-5"></i><span>Confirmar Pedido (Pagar en Efectivo)</span>`;
         subtexto.innerText = "El pedido se enviará directo a WhatsApp para preparar el despacho y abonar al repartidor.";
@@ -1087,15 +1091,15 @@
       }
       mensaje += `%0A¿Me confirman recepción y tiempo estimado de entrega? ¡Muchas gracias!`;
 
+      const urlWA = `https://wa.me/${CONFIG_PAGOS.whatsapp}?text=${mensaje}`;
+
       if (metodoPagoSeleccionado === "mercadopago") {
         const linkMP = CONFIG_PAGOS.linksMercadoPago[poteActual.maxSabores] || "https://mpago.la/";
         window.open(linkMP, "_blank");
+        window.location.href = urlWA;
+      } else {
+        window.location.href = urlWA;
       }
-
-      setTimeout(() => {
-        const urlWA = `https://wa.me/${CONFIG_PAGOS.whatsapp}?text=${mensaje}`;
-        window.open(urlWA, "_blank");
-      }, 600);
     }
 
     document.addEventListener("DOMContentLoaded", () => {
