@@ -82,9 +82,11 @@
           <i data-lucide="shopping-cart" class="w-4 h-4"></i>
           <span>Pedir Online</span>
         </a>
+                                <button type="button" onclick="toggleMobileMenu()" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-full text-brand-blue hover:bg-brand-cream transition text-xl leading-none">☰</button>
       </div>
     </div>
   </header>
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-20 z-40 bg-white border-b border-brand-sand shadow-lg"><nav class="flex flex-col p-4 gap-1 font-semibold text-sm text-gray-800"><a href="#destacados" onclick="toggleMobileMenu()" class="py-3 px-3 rounded-lg hover:bg-brand-cream transition">Sabores Estrella</a><a href="#sabores" onclick="toggleMobileMenu()" class="py-3 px-3 rounded-lg hover:bg-brand-cream transition">Carta Completa</a><a href="#precios" onclick="toggleMobileMenu()" class="py-3 px-3 rounded-lg hover:bg-brand-cream transition">Presentaciones</a><a href="#testimonios" onclick="toggleMobileMenu()" class="py-3 px-3 rounded-lg hover:bg-brand-cream transition">Opiniones</a><a href="#faq" onclick="toggleMobileMenu()" class="py-3 px-3 rounded-lg hover:bg-brand-cream transition">Preguntas</a></nav></div>
 
   <!-- HERO SECTION -->
   <section class="relative overflow-hidden pt-10 pb-16 md:py-20">
@@ -927,12 +929,12 @@
       actualizarUI();
       document.getElementById("pedido").scrollIntoView({ behavior: 'smooth' });
     }
-
-    function cargarPreset(sabores) {
+      function toggleMobileMenu() { const m = document.getElementById('mobile-menu'); const b = document.querySelector('[aria-controls="mobile-menu"]'); const o = document.getElementById('menu-icon-open'); const c = document.getElementById('menu-icon-close'); const wasHidden = m.classList.contains('hidden'); m.classList.toggle('hidden'); o.classList.toggle('hidden'); c.classList.toggle('hidden'); if (b) { b.setAttribute('aria-expanded', wasHidden ? 'true' : 'false'); } }    function cargarPreset(sabores) {
+        function cargarPreset(sabores) {
       saboresSeleccionados = sabores.slice(0, poteActual.maxSabores);
       actualizarUI();
       document.getElementById("pedido").scrollIntoView({ behavior: 'smooth' });
-    }
+      }
                    function toggleSabor(nombre) {
       const idx = saboresSeleccionados.indexOf(nombre);
       if (idx > -1) {
