@@ -929,9 +929,9 @@
       actualizarUI();
       document.getElementById("pedido").scrollIntoView({ behavior: 'smooth' });
     }
-      function toggleMobileMenu() { const m = document.getElementById('mobile-menu'); const b = document.querySelector('[aria-controls="mobile-menu"]'); const o = document.getElementById('menu-icon-open'); const c = document.getElementById('menu-icon-close'); const wasHidden = m.classList.contains('hidden'); m.classList.toggle('hidden'); o.classList.toggle('hidden'); c.classList.toggle('hidden'); if (b) { b.setAttribute('aria-expanded', wasHidden ? 'true' : 'false'); } }    function cargarPreset(sabores) {
-        function cargarPreset(sabores) {
-      saboresSeleccionados = sabores.slice(0, poteActual.maxSabores);
+      function toggleMobileMenu() { const m = document.getElementById('mobile-menu'); const b = document.querySelector('[aria-controls="mobile-menu"]'); const o = document.getElementById('menu-icon-open'); const c = document.getElementById('menu-icon-close'); const wasHidden = m.classList.contains('hidden'); m.classList.toggle('hidden'); o.classList.toggle('hidden'); c.classList.toggle('hidden'); if (b) { b.setAttribute('aria-expanded', wasHidden ? 'true' : 'false'); } }    
+      function cargarPreset(sabores) {
+        saboresSeleccionados = sabores.slice(0, poteActual.maxSabores);
       actualizarUI();
       document.getElementById("pedido").scrollIntoView({ behavior: 'smooth' });
       }
