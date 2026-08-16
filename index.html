@@ -785,7 +785,7 @@
                       <img src="/Logo%20Instagram.jpg" alt="Antonysia" class="w-full h-full object-cover">
           </div>
           <div>
-                        <img src="/Fijado%20Instagram.jpg" alt="Antonysia" class="h-7 w-auto rounded">
+                                    <span class="font-logo text-xl font-bold text-brand-cream">Antonysia</span>
             <span class="block text-[10px] text-gray-400 uppercase tracking-widest">Helados Artesanales • Gabino Ezeiza 8679, Loma Hermosa</span>
           </div>
         </div>
@@ -933,8 +933,7 @@
       actualizarUI();
       document.getElementById("pedido").scrollIntoView({ behavior: 'smooth' });
     }
-
-    function toggleSabor(nombre) {
+                   function toggleSabor(nombre) {
       const idx = saboresSeleccionados.indexOf(nombre);
       if (idx > -1) {
         saboresSeleccionados.splice(idx, 1);
